@@ -1,10 +1,11 @@
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { defineConfig } from "vite"
-import path from 'path'
 import Inspect from 'vite-plugin-inspect';
 import checker from 'vite-plugin-checker'
 
 export default defineConfig({
+    // repository is at https://github.com/<USERNAME>/<REPO>
+  base: '/vite-boilerplate-js/',
   server: {
     port: "5000",
   },
@@ -21,10 +22,4 @@ export default defineConfig({
       },
     }),
   ],
-  envPrefix: 'APP',
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, './src/assets')
-    }
-  }
 })
